@@ -16,11 +16,11 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
+ int  bool
+ char
+ double
+ float
+ unsigned int
  
  
  
@@ -59,10 +59,42 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+
+    //integers:
+    int numberOfLaptops = 1;
+    int numberOfMonitors = 2;
+    int numberOfApplications = 10;
+
+    //float:
+    float averageHeightInFloat = 1.53f;
+    float averageLengthInFloat = 12.56f;
+    float averageWidthInFloat = 556.789f;
+
+    //double:
+    double averageHeightInDouble = 1.11111111;
+    double averageLengthInDouble = 12.5666666;
+    double averageWidthInDouble = 556.78999999;
+
+    //bool:
+    bool isProgrammer = true;
+    bool isSmart = false;
+    bool isSuperHero = false; 
+
+    //char:
+    char intialOfFirstName = 'R';
+    char intialOfMiddleName = 'R';
+    char intialOfLastName = 'Z';
+
+    //unsigned int
+    unsigned int x = 0;
+    unsigned int y = 1;
+    unsigned int z = 2;
+
+
     
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, numberOfLaptops, numberOfMonitors, numberOfApplications, averageHeightInFloat, averageLengthInFloat, averageWidthInFloat, averageHeightInDouble, averageLengthInDouble, averageWidthInDouble, isProgrammer, isSmart, isSuperHero, intialOfFirstName, intialOfMiddleName, intialOfLastName, x, y, z); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,42 +111,90 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+char firstLetterOfWord(std::string word)
+{
+    ignoreUnused(word);
+    return {};
+}
 
 /*
  2)
  */
+char luckyLetterOfDate(int date = 1)
+{
+    ignoreUnused(date);
+    return {};
+}
 
 /*
  3)
  */
+bool isOddNumber(int number = 0)
+{
+    ignoreUnused(number);
+    return {};
+}
 
 /*
  4)
  */
+bool doWeHaveAllTheTools(int numberOfScrews, int numberOfScrewDrivers = 1, int numberOfDrillBits = 1)
+{
+    ignoreUnused(numberOfScrews, numberOfScrewDrivers, numberOfDrillBits);
+    return {};
+}
 
 /*
  5)
  */
+int numberOfDaysUntil(int targetDate, int currentDate)
+{
+    ignoreUnused(targetDate, currentDate);
+    return {};
+}
 
 /*
  6)
  */
+int totalNumberOfAnimals(int numberOfMonkeys, int numberOfWolves, int numberOfTigers, int numberOfCats)
+{
+    ignoreUnused(numberOfMonkeys, numberOfWolves, numberOfTigers, numberOfCats);
+    return {};
+}
 
 /*
  7)
  */
+double averageOfThreeDoubles(double x, double y, double z = 0.0)
+{
+    ignoreUnused(x, y, z);
+    return {};
+}
 
 /*
  8)
  */
+double areaOfCircle(double radius = 0.0)
+{
+    ignoreUnused(radius);
+    return {};
+}
 
 /*
  9)
  */
+void assembleLego(int numberOfLegoPieces, bool isThereAnyInstructions = true)
+{
+    ignoreUnused(numberOfLegoPieces, isThereAnyInstructions); 
+}
 
 /*
  10)
  */
+void userLogIn(std::string password, std::string username = "1111")
+{
+    ignoreUnused(password, username);
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -136,27 +216,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    auto firstLetter = firstLetterOfWord("hello");
     
     //2)
+    auto luckyLetter = luckyLetterOfDate(1234567);
     
     //3)
+    auto isOdd = isOddNumber(3);
     
     //4)
+    auto haveAllTheTools = doWeHaveAllTheTools(10, 2, 2);
     
     //5)
+    auto numberOfDaysUntilChristmas = numberOfDaysUntil(475869, 472334);
     
     //6)
-    
+    auto numberOfAnimals = totalNumberOfAnimals(2, 0, 2, 2);
+
     //7)
+    auto average = averageOfThreeDoubles(2.0, 2.0, 2.0);
     
     //8)
+    auto area = areaOfCircle(2.0);
     
     //9)
+    assembleLego(1000, false);
     
     //10)
+    userLogIn("asdf1234", "qewr@zxcv.com");
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, firstLetter, luckyLetter, isOdd, haveAllTheTools, numberOfDaysUntilChristmas, numberOfAnimals, average, area);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
