@@ -140,7 +140,7 @@ bool isOddNumber(int number = 0)
  */
 bool doWeHaveAllTheTools(int numberOfScrews, int numberOfScrewDrivers = 1, int numberOfDrillBits = 1)
 {
-    ignoreUnused(numberOfScrews,numberOfScrewDrivers,numberOfDrillBits);
+    ignoreUnused(numberOfScrews, numberOfScrewDrivers, numberOfDrillBits);
     return {};
 }
 
@@ -149,7 +149,7 @@ bool doWeHaveAllTheTools(int numberOfScrews, int numberOfScrewDrivers = 1, int n
  */
 int numberOfDaysUntil(int targetDate, int currentDate)
 {
-    ignoreUnused(targetDate,currentDate);
+    ignoreUnused(targetDate, currentDate);
     return {};
 }
 
@@ -158,7 +158,7 @@ int numberOfDaysUntil(int targetDate, int currentDate)
  */
 int totalNumberOfAnimals(int numberOfMonkeys, int numberOfWolves, int numberOfTigers, int numberOfCats)
 {
-    ignoreUnused(numberOfMonkeys,numberOfWolves,numberOfTigers,numberOfCats);
+    ignoreUnused(numberOfMonkeys, numberOfWolves, numberOfTigers, numberOfCats);
     return {};
 }
 
@@ -167,7 +167,7 @@ int totalNumberOfAnimals(int numberOfMonkeys, int numberOfWolves, int numberOfTi
  */
 double averageOfThreeDoubles(double x, double y, double z = 0.0)
 {
-    ignoreUnused(x,y,z);
+    ignoreUnused(x, y, z);
     return {};
 }
 
@@ -185,7 +185,7 @@ double areaOfCircle(double radius = 0.0)
  */
 void assembleLego(int numberOfLegoPieces, bool isThereAnyInstructions = true)
 {
-    ignoreUnused(numberOfLegoPieces,isThereAnyInstructions); 
+    ignoreUnused(numberOfLegoPieces, isThereAnyInstructions); 
 }
 
 /*
@@ -225,25 +225,25 @@ int main()
     auto isOdd = isOddNumber(3);
     
     //4)
-    auto haveAllTheTools = doWeHaveAllTheTools(10,2,2);
+    auto haveAllTheTools = doWeHaveAllTheTools(10, 2, 2);
     
     //5)
-    auto numberOfDaysUntilChristmas = numberOfDaysUntil(475869,472334);
+    auto numberOfDaysUntilChristmas = numberOfDaysUntil(475869, 472334);
     
     //6)
-    auto numberOfAnimals = totalNumberOfAnimals(2,0,2,2);
+    auto numberOfAnimals = totalNumberOfAnimals(2, 0, 2, 2);
 
     //7)
-    auto average = averageOfThreeDoubles(2.0,2.0,2.0);
+    auto average = averageOfThreeDoubles(2.0, 2.0, 2.0);
     
     //8)
     auto area = areaOfCircle(2.0);
     
     //9)
-    assembleLego(1000,false);
+    assembleLego(1000, false);
     
     //10)
-    userLogIn("asdf1234","qewr@zxcv.com");
+    userLogIn("asdf1234", "qewr@zxcv.com");
     
     
     ignoreUnused(carRented, firstLetter, luckyLetter, isOdd, haveAllTheTools, numberOfDaysUntilChristmas, numberOfAnimals, average, area);
